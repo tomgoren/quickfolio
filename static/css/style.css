@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    direction: ltr;
+} 
+
+body {
+    background: white;
+    color: #242323;
+    font-family: 'Oxygen', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    margin: 20px auto;
+    width: 1000px;
+}
+
+
+#header {
+    margin-bottom: 1.4em;
+}
+
+#header h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #B8B8BA;
+}
+
+#header h1 a{
+    text-decoration: none;
+    color: #B8B8BA;
+}
+
+#menu_col {
+    float: left;
+    width: 15%;
+    height: 800px;
+}
+
+ul#menu_list {
+    list-style: none;
+}
+
+ul#menu_list li {
+    display:block;
+    margin-bottom: 0.8em;
+}
+
+ul#menu_list li a{
+    text-decoration: none;
+    color: #242323;
+}
+    
+ul#menu_list li a:hover{
+    background: #4F1423;
+    color: white;
+}
+
+#main_content {
+    width: 80%;
+    float: right;
+}
+
+
+#main_text {
+}
+
+#main_text p#life{
+    text-align: left;
+    font-weight: normal;
+    margin-bottom: 2em;
+}
+
+#main_text h2{
+    font-size: 1.1em;
+    text-align: left;
+    margin: 1em 0em;
+}
+
+#main_text #contact {
+    margin-top: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#main_text #contact a {
+    text-decoration: none;
+    color: #242323;
+}
+
+#main_text ul.bullets{
+    margin-left: 2em;
+}
+
+#gallery_wrapper {
+    text-align: center;
+}
+
+table#thumbgrid {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+table#thumbgrid tr td{
+    text-align: left;
+    vertical-align: top;
+    height: 175px;
+    width: 175px;
+}
+
+
+#news {
+    text-align: center;
+}
+
+#news .invitation {
+    margin-top: 1.5em;
+}
+
+#news hr {
+    margin: 2em 0em;
+}

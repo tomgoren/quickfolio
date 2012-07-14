@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Example Site Name - {{ title }} </title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link href="{{ baseurl }}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'> 
+
+    <link rel="stylesheet" href="{{baseurl}}/css/slimbox2.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{baseurl}}/js/slimbox2.js"></script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29829529-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Add custom button to slimbox for downloading images -->
+    <!--
+    <script type="text/javascript">
+    // AUTOLOAD CODE BLOCK (MAY BE CHANGED OR REMOVED)
+    jQuery(function($) {
+        $("a[rel^='lightbox']").slimbox({/* Put custom options here */}, function(el) {
+                return [el.href, el.title + '<br /><a href="' + el.href + '">Download this image</a>'];
+        }, function(el) {
+                return (this == el) || ((this.rel.length > 8) && (this.rel == el.rel));
+        });
+    });
+    </script>
+    -->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="header">
+            <h1><a href="{{ baseurl }}">Example Site Name</a></h1>
+        </div>
+        <div id="menu_col">
+            <ul id="menu_list">
+                <li><a href="{{ baseurl }}/index.html">Works</a></li>
+                <li><a href="{{ baseurl }}/news.html">News</a></li>
+                <li><a href="{{ baseurl }}/about.html">About</a></li>
+                <li><a href="{{ baseurl }}/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div id="main_content">
+
+        {% block main %}
+        {% end %}
+        </div>
+</body>
+</html>

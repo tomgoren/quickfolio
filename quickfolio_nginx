@@ -1,0 +1,25 @@
+server {
+    server_name www.example.com;
+    rewrite ^(.*) http://example.com$1 permanent;
+}
+
+# The whole rewrite issue is becasue I prefer 'www'-less URLs
+# Otherwise comment out the part above and use www.example.com as server_name
+
+server {
+	server_name example.com;
+
+	root /var/www/quickfolio/static;
+
+    rewrite ^/$ /index.html last;
+
+	# pass all dynamic requests to the tornado server on 8080
+    # (see quickfolio_config for the port)
+	#
+    # 'html' files here are actually tornado dynamically generated
+    # content, and nginx will server everything else, i.e. js, css, images
+	location ~ \.html$ {
+        proxy_pass http://127.0.0.1:8080;
+	}
+
+}

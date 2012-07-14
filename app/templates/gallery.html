@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<table id="thumbgrid">
+    <tr>
+        {% for index,image in enumerate(image_list.entry) %}
+            <td>
+                <a href="{{ image.content.src }}" rel="lightbox-gallery" title="{{ image.media.description.text }}">
+                    <img src="{{ image.media.thumbnail[0].url }}" alt="" class="thumbnail" />
+                </a>
+            </td>
+            {% set index = index +1 %}
+            {% if index % 5 == 0 %}
+    </tr>
+    <tr>
+            {% end %}
+        {% end %}
+    {% if index % 5 != 0 %}
+    </tr>
+    {% end %}
+
+{% end %}
