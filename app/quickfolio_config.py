@@ -14,3 +14,6 @@ baseurl = "http://saharzukerman.com"
 
 # Tornado listening port (don't forget to point your static content server to this)
 listen_port = 8080
+
+# Google analytics account (the js is already set up in the 'base.html' template)
+ga_account = "124376"

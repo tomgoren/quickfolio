@@ -3,7 +3,7 @@
 import tornado.ioloop
 import tornado.web
 import tornado.template
-from quickfolio_config import picasa_user, album_id, baseurl, listen_port
+from quickfolio_config import picasa_user, album_id, baseurl, listen_port, ga_account
 
 # Requires the "python-gdata" package on Ubuntu
 import gdata.photos.service
@@ -20,24 +20,24 @@ class GalleryHandler(tornado.web.RequestHandler):
         gd_client = gdata.photos.service.PhotosService()
         image_list = gd_client.GetFeed( api_album_url % (
                                   picasa_user, album_id))
-        self.render("./templates/gallery.html", baseurl=baseurl, title=title, image_list=image_list)
+        self.render("./templates/gallery.html", baseurl=baseurl, ga_account=ga_account, title=title, image_list=image_list)
 
 # Just a bunch of boilerplate pages for the rest of the site, usually found on a portfolio website
 class AboutHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("./templates/about.html", baseurl=baseurl, title="About")
+        self.render("./templates/about.html", baseurl=baseurl, ga_account=ga_account, title="About")
 
 class ContactHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("./templates/contact.html", baseurl=baseurl, title="contact")
+        self.render("./templates/contact.html", baseurl=baseurl, ga_account=ga_account, title="contact")
 
 class PressHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("./templates/press.html", baseurl=baseurl, title="Press")
+        self.render("./templates/press.html", baseurl=baseurl, ga_account=ga_account, title="Press")
 
 class NewsHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("./templates/news.html", baseurl=baseurl, title="Current")
+        self.render("./templates/news.html", baseurl=baseurl, ga_account=ga_account, title="Current")
 
 application = tornado.web.Application(
     [ ('/', GalleryHandler),
