@@ -12,3 +12,9 @@ An added value gained by using the gdata api is a robust yes simple portfolio si
 **app/** includes the **main.py** and the templates. The most interesting template is **gallery.py**, it contains some logic for presenting the table of thumbnails etc.
 
 **static/** holds static content (css, js, various images).
+
+Here are two examples of sites based on quickfolio (each uses a different js gallery library):
+
+[Example 1 - Sahar Zukerman](http://saharzukerman.com "Sahar Zukerman - Paintings and Works")
+
+[Example 2 - Zohar Fraiman](http://zoharfraiman.com "Zohar Fraiman - Paintings and Works")
