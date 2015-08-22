@@ -17,4 +17,3 @@ Here are two examples of sites based on quickfolio (each uses a different js gal
 
 [Example 1 - Sahar Zukerman](http://saharzukerman.com "Sahar Zukerman - Paintings and Works")
 
-[Example 2 - Zohar Fraiman](http://zoharfraiman.com "Zohar Fraiman - Paintings and Works")
