@@ -14,4 +14,4 @@ An added value gained by using the gdata api is a robust yes simple portfolio si
 **static/** holds static content (css, js, various images).
 
 
-p.s. This might be completely irrelevant at this point (2016), seeing as it is pretty easy to just throw up a site using Squarespace or something similar). This was made in a different era with simplicity in mind. I'm proud of it nonetheless, because it is quick and funky.
+p.s. This might be completely irrelevant at this point (2016), seeing as it is pretty easy to just throw up a site using Squarespace or something similar. This was made in a different era with simplicity in mind. I'm proud of it nonetheless, because it is quick and funky.
